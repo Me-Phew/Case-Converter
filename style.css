@@ -1,0 +1,63 @@
+html {
+    background-color: #42464d;
+}
+
+.title {
+    font-size: 500%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+label {
+    height: 400px;
+    width: 90%;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    background-color: #42464d;
+    color: white;
+    font-size: 22px;
+}
+
+button {
+    background-color: orange;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 25%;
+    height: 35px;
+    min-width: 80px;
+    min-height: 10%;
+    max-width: 150px;
+    max-height: 35px;
+    margin: 15px;
+    border: 0;
+    font-size: 100%;
+}
+
+button:hover {
+    color: white;
+    background-color: darkorange;
+}
+
+button:active {
+    color: white;
+    background-color: orangered;
+}
+
+#buttons_container {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#main_container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
