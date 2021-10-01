@@ -7,21 +7,15 @@ html {
     box-sizing: border-box;
     text-align: center;
     color: white;
+
 }
 
 label {
-    height: 400px;
+    height: 50vh;
     width: 90%;
-}
-
-textarea {
-    height: 100%;
-    width: 100%;
-    resize: none;
-    box-sizing: border-box;
-    background-color: #42464d;
-    color: white;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -46,7 +40,12 @@ button:hover {
 
 button:active {
     color: white;
-    background-color: orangered;
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #aaa;
+    color: #444;
 }
 
 #buttons_container {
@@ -60,4 +59,58 @@ button:active {
     display: flex;
     flex-flow: column;
     align-items: center;
+}
+
+@keyframes textearea-anim {
+    from {
+        border: 0;
+        border-radius: 140px;
+        background-color: #aaa;
+        padding-top: 20px;
+        padding-left: 20px;
+        height: 15%;
+        width: 50%;
+    }
+    to {
+        border: 2px solid cyan;
+        border-radius: 2px;
+        background-color: #eee;
+        padding-top: 5px;
+        padding-left: 5px;
+        height: 100%;
+        width: 90%;
+    }
+}
+
+textarea {
+    border: 0;
+    border-radius: 140px;
+    background-color: #aaa;
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 15%;
+    width: 50%;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: black;
+    outline: none;
+    animation: textearea-anim 400ms paused forwards;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::placeholder {
+    color: #555;
+}
+
+textarea:focus {
+    animation-play-state: running;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
 }

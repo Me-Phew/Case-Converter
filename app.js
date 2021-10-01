@@ -6,6 +6,28 @@ let properCaseButton = document.getElementById("proper-case");
 let sentenceCaseButton = document.getElementById("sentence-case");
 let saveButton = document.getElementById("save-text-file");
 
+upperCaseButton.disabled = true;
+lowerCaseButton.disabled = true;
+properCaseButton.disabled = true;
+sentenceCaseButton.disabled = true;
+saveButton.disabled = true;
+
+textArea.addEventListener("input", function (){
+    if (textArea.value !== ""){
+        upperCaseButton.disabled = false;
+        lowerCaseButton.disabled = false;
+        properCaseButton.disabled = false;
+        sentenceCaseButton.disabled = false;
+        saveButton.disabled = false;
+    } else {
+        upperCaseButton.disabled = true;
+        lowerCaseButton.disabled = true;
+        properCaseButton.disabled = true;
+        sentenceCaseButton.disabled = true;
+        saveButton.disabled = true;
+    }
+})
+
 upperCaseButton.addEventListener("click", function (){
     textArea.value = textArea.value.toUpperCase();
 });
