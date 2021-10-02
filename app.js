@@ -53,7 +53,7 @@ sentenceCaseButton.addEventListener("click", function (){
         text[i] = text[i].trim();
         text[i] = text[i].charAt(0).toUpperCase() + text[i].slice(1).toLowerCase();
     }
-    text = text.join(". ");
+    text = text.join(".");
     textArea.value = text;
 })
 
