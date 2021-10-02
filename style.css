@@ -3,6 +3,7 @@ html {
 }
 
 .title {
+    margin-top: 50px;
     font-size: 500%;
     box-sizing: border-box;
     text-align: center;
@@ -16,6 +17,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 button {
@@ -55,7 +57,7 @@ button:disabled {
     justify-content: center;
 }
 
-#main_container {
+#main-container {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -72,7 +74,7 @@ button:disabled {
         width: 50%;
     }
     to {
-        border: 2px solid cyan;
+        border: 2px solid orange;
         border-radius: 5px;
         background-color: #eee;
         padding-top: 5px;
@@ -83,6 +85,7 @@ button:disabled {
 }
 
 textarea {
+    pointer-events: auto;
     border: 0;
     border-radius: 140px;
     background-color: #aaa;
