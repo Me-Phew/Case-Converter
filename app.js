@@ -6,25 +6,25 @@ let properCaseButton = document.getElementById("proper-case");
 let sentenceCaseButton = document.getElementById("sentence-case");
 let saveButton = document.getElementById("save-text-file");
 
-upperCaseButton.disabled = true;
-lowerCaseButton.disabled = true;
-properCaseButton.disabled = true;
-sentenceCaseButton.disabled = true;
-saveButton.disabled = true;
+let buttons = document.querySelectorAll("button");
+
+let buttonsOn = false;
+
+function changeBtnState(){
+    buttons.forEach(function (element) {
+        element.disabled = !buttonsOn;
+    });
+}
+
+changeBtnState();
 
 textArea.addEventListener("input", function (){
-    if (textArea.value !== ""){
-        upperCaseButton.disabled = false;
-        lowerCaseButton.disabled = false;
-        properCaseButton.disabled = false;
-        sentenceCaseButton.disabled = false;
-        saveButton.disabled = false;
+    if (textArea.value === ""){
+        buttonsOn = false;
+        changeBtnState();
     } else {
-        upperCaseButton.disabled = true;
-        lowerCaseButton.disabled = true;
-        properCaseButton.disabled = true;
-        sentenceCaseButton.disabled = true;
-        saveButton.disabled = true;
+        buttonsOn = true;
+        changeBtnState();
     }
 })
 
