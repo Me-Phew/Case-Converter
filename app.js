@@ -71,3 +71,15 @@ function download(filename, text) {
 saveButton.addEventListener("click", function (){
     download("text.txt",  textArea.value);
 })
+
+let snackbarTestBtn = document.getElementById("snackbar-test");
+snackbarTestBtn.addEventListener("click", function (){
+    let snackbar = document.getElementById("snackbar");
+
+    if (snackbar.className !== "show"){
+        snackbar.className = "show";
+        setTimeout(function (){
+            snackbar.className = snackbar.className.replace("show", "");
+        }, 3000)
+    }
+})
