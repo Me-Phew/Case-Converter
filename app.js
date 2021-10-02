@@ -16,8 +16,6 @@ function changeBtnState(){
     });
 }
 
-changeBtnState();
-
 textArea.addEventListener("input", function (){
     if (textArea.value === ""){
         buttonsOn = false;
