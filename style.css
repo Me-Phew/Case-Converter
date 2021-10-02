@@ -73,7 +73,7 @@ button:disabled {
     }
     to {
         border: 2px solid cyan;
-        border-radius: 2px;
+        border-radius: 5px;
         background-color: #eee;
         padding-top: 5px;
         padding-left: 5px;
@@ -96,10 +96,28 @@ textarea {
     color: black;
     outline: none;
     animation: textearea-anim 400ms paused forwards;
+    cursor: auto;
 }
 
-textarea::-webkit-scrollbar {
-    display: none;
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bbb;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    cursor: grab;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }
 
 textarea::placeholder {
@@ -108,9 +126,4 @@ textarea::placeholder {
 
 textarea:focus {
     animation-play-state: running;
-}
-
-#container {
-    width: 100%;
-    text-align: center;
 }
