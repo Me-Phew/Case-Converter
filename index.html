@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+<!--    <link rel="manifest" href="site.webmanifest">-->
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -15,21 +15,46 @@
 <body>
     <div class="title">Case Converter</div>
     <div id="main-container">
-        <label>
+        <label id="textarea-label">
             <textarea placeholder="Type your text here..."></textarea>
         </label>
         <div id="buttons_container">
-            <button id="upper-case" disabled="disabled">Upper Case</button>
-            <button id="lower-case" disabled="disabled">Lower Case</button>
-            <button id="proper-case" disabled="disabled">Proper Case</button>
-            <button id="sentence-case" disabled="disabled">Sentence Case</button>
-            <button id="save-text-file" disabled="disabled">Save Text To File</button>
+            <button id="upper-case" class="disabled">Upper Case</button>
+            <button id="lower-case" class="disabled">Lower Case</button>
+            <button id="proper-case" class="disabled">Proper Case</button>
+            <button id="sentence-case" class="disabled">Sentence Case</button>
+            <button id="save-text-file" class="disabled">Save Text To File</button>
         </div>
-        <!-- Use a button to open the snackbar -->
-        <button id="snackbar-test">Snackbar test</button>
     </div>
-    <!-- Snackbar -->
-    <div id="snackbar">You should type some text first</div>
+    <div id="snackbar">
+        <span>You need to type some text first</span>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                 viewBox="0 0 50 50" overflow="visible" stroke="#f2e6ff"
+                 stroke-width="7" stroke-linecap="round">
+                <line x2="50" y2="50" />
+                <line x1="50" y2="50" />
+            </svg>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="file-name-dialog" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div id="close" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                     viewBox="0 0 50 50" overflow="visible" stroke="#f2e6ff"
+                     stroke-width="7" stroke-linecap="round">
+                    <line x2="50" y2="50" />
+                    <line x1="50" y2="50" />
+                </svg>
+            </div>
+            <p>Filename</p>
+            <label>
+                <input id="filename-input" placeholder="Text" type="text">
+            </label>
+            <button id="download-btn">Download</button>
+        </div>
     <script src="app.js"></script>
 </body>
 </html>
